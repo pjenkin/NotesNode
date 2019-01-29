@@ -16,3 +16,9 @@ module.exports.addNote = () => {
   var noteAdded = 'Adding Note';
   return noteAdded;
 }
+// NB arrow/lambda function notation =>
+
+
+module.exports.add = (a,b) => {
+  return a + b;
+}

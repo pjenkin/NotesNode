@@ -16,14 +16,19 @@ var user = os.userInfo();
 
 //fs.appendFile('greetings.txt', 'Hello Mum! From ' + os.userInfo().username, function(err)
 // use ES6 template string ``
-fs.appendFile('greetings.txt', `Hello Mum! From ${user.username} - age = ${notes.age} ` , function(err)
-{
-  if (err)
-  {
-    console.log('Cannot write to file - unable');
-  }
-});
+// fs.appendFile('greetings.txt', `Hello Mum! From ${user.username} - age = ${notes.age} ` , function(err)
+// {
+//   if (err)
+//   {
+//     console.log('Cannot write to file - unable');
+//   }
+// });
 
 
 // could be synchronous method to avoid warning message
 // fs.appendFileSync('greetings.txt', 'Hello Mum!');
+
+var result = notes.addNote();
+console.log(result);
+
+console.log(notes.add(-4,8));   // check my add function
