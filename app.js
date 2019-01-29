@@ -1,9 +1,14 @@
-console.log('starting app');
+console.log('starting app.js');
 
 const fs = require('fs');
 // NB require command to use FileSystem / fs module
 
 const os = require('os');
+
+const notes = require('./notes.js');
+// ./ relative path
+
+console.log(notes.logtest);
 
 var user = os.userInfo();
 // console.log(user);
@@ -11,7 +16,7 @@ var user = os.userInfo();
 
 //fs.appendFile('greetings.txt', 'Hello Mum! From ' + os.userInfo().username, function(err)
 // use ES6 template string ``
-fs.appendFile('greetings.txt', `Hello Mum! From ${user.username} ` , function(err)
+fs.appendFile('greetings.txt', `Hello Mum! From ${user.username} - age = ${notes.age} ` , function(err)
 {
   if (err)
   {
