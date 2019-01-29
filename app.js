@@ -6,10 +6,12 @@ const fs = require('fs');
 const os = require('os');
 
 var user = os.userInfo();
-console.log(user);
-process.exit(0);
+// console.log(user);
+// process.exit(0);
 
-fs.appendFile('greetings.txt', 'Hello Mum! From ' , function(err)
+//fs.appendFile('greetings.txt', 'Hello Mum! From ' + os.userInfo().username, function(err)
+// use ES6 template string ``
+fs.appendFile('greetings.txt', `Hello Mum! From ${user.username} ` , function(err)
 {
   if (err)
   {
