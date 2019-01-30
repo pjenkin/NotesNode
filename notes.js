@@ -12,14 +12,14 @@ var fetchNotes = () => {
   }
 };
 
-var saveNotes = () =>
+var saveNotes = (notes) =>
 {
   fs.writeFileSync('notes-data.json', JSON.stringify(notes));
 };
 
 var addNote = (title, body) => {
   console.log('Adding note', title, body);
-  var notes = fetchNotes;
+  var notes = fetchNotes();
   var note = {
     title,
     body    // ES6 no need for body:body
