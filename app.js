@@ -5,10 +5,15 @@ const fs = require('fs');
 
 const os = require('os');
 
+const _ = require('lodash');    // 3rd party (npm) module
+
 const notes = require('./notes.js');
 // ./ relative path
 
 console.log(notes.logtest);
+
+console.log(_.isString(true));
+console.log(_.isString('Peter'));
 
 var user = os.userInfo();
 // console.log(user);
