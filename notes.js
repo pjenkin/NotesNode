@@ -13,6 +13,9 @@ var fetchNotes = () => {
 };
 
 var saveNotes = () =>
+{
+  fs.writeFileSync('notes-data.json', JSON.stringify(notes));
+};
 
 var addNote = (title, body) => {
   console.log('Adding note', title, body);
@@ -36,7 +39,7 @@ var duplicateNotes = notes.filter((note) =>  note.title === title);
 // go ahead if no duplicates (none with this title already), write new note, else don't save
 if (duplicateNotes.length === 0) {
   notes.push(note);
-  fs.writeFileSync('notes-data.json', JSON.stringify(notes));
+  saveNotes(notes);
 }
 
 
