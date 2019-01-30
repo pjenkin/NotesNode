@@ -12,8 +12,13 @@ const notes = require('./notes.js');
 
 console.log(notes.logtest);
 
-console.log(_.isString(true));
-console.log(_.isString('Peter'));
+console.log('_.isString(true)',_.isString(true));
+console.log('_.isString("Peter")',_.isString('Peter'));
+
+var filteredArray = _.uniq(['PNJ','PNJ',1,1,2,3]);
+
+console.log("_.uniq(['PNJ','PNJ',1,1,2,3])",filteredArray);
+
 
 var user = os.userInfo();
 // console.log(user);
