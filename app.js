@@ -20,6 +20,14 @@ if (command === 'add')
 else if (command === 'list')
 {
   console.log('Listing all notes');
+}
+else if (command === 'read')
+{
+  console.log('Reading note');
+}
+else if (command === 'remove')
+{
+  console.log('Removing note');
 } else {
   console.log('Command not recognised');
 }
