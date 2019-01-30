@@ -20,7 +20,7 @@ console.log('Yargs:', argv);
 if (command === 'add')
 {
   // console.log('Adding new note');
-  notes.addNote(argv.title, argv.body);
+  var note = notes.addNote(argv.title, argv.body);
 }
 else if (command === 'list')
 {

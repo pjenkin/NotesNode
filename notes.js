@@ -40,6 +40,7 @@ var duplicateNotes = notes.filter((note) =>  note.title === title);
 if (duplicateNotes.length === 0) {
   notes.push(note);
   saveNotes(notes);
+  return note;
 }
 
 
