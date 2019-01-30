@@ -2,21 +2,27 @@ console.log('starting notes.js');
 
 const fs = require('fs');   // core node module
 
+var fetchNotes = () => {
+  // try/catch in case file not yet existing
+  try {
+    var notesString = fs.readFileSync('notes-data.json');   // get existing notes
+    return JSON.parse(notesString);
+  } catch (e) {
+    return [];    // empty array returned if no notes yet
+  }
+};
+
+var saveNotes = () =>
+
 var addNote = (title, body) => {
   console.log('Adding note', title, body);
-  var notes = [];
+  var notes = fetchNotes;
   var note = {
     title,
     body    // ES6 no need for body:body
   };
 
-// try/catch in case file not yet existing
-try {
-  var notesString = fs.readFileSync('notes-data.json');   // get existing notes
-  notes = JSON.parse(notesString);
-} catch (e) {
 
-}
 
 // look for notes with this title already
 // var duplicateNotes = notes.filter((note) => {
