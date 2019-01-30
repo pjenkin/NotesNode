@@ -3,7 +3,7 @@ console.log('starting app.js');
 const fs = require('fs');
 // NB require command to use FileSystem / fs module
 
-const os = require('os');
+// const os = require('os');
 
 const _ = require('lodash');    // 3rd party (npm) module
 
@@ -15,9 +15,9 @@ console.log(notes.logtest);
 console.log('_.isString(true)',_.isString(true));
 console.log('_.isString("Peter")',_.isString('Peter'));
 
-var filteredArray = _.uniq(['PNJ','PNJ',1,1,2,3]);
+var filteredArray = _.uniq(['PNJ','Peter',1,1,2,3]);
 
-console.log("_.uniq(['PNJ','PNJ',1,1,2,3])",filteredArray);
+console.log("_.uniq(['PNJ','Peter',1,1,2,3])",filteredArray);
 
 
 var user = os.userInfo();
