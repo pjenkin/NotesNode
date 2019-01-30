@@ -21,6 +21,20 @@ if (command === 'add')
 {
   // console.log('Adding new note');
   var note = notes.addNote(argv.title, argv.body);
+  // check returned note has right fields (undefined if note not added e.g. duplicate)
+// console.log(note);
+// console.log(_.has(note,['title','body']));
+// console.log(_.has(note,'title'));
+// console.log(_.has(note,'body'));
+  // if (_.has(note,['title','body']))
+  if (_.has(note,'title'))
+  {
+    console.log(`Note ${note.title} added`);
+  } else
+  {
+    console.log('Error occurred (maybe duplicate title): Note not added');
+  }
+
 }
 else if (command === 'list')
 {
