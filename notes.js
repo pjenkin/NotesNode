@@ -8,10 +8,24 @@ var getAll = () => {
   console.log('Getting all notes');
 }
 
+var getNote = (title) => {
+  console.log(`Getting note ${title}`);
+  // console.console.log("Getting note ",title);
+}
+
+var removeNote = (title) => {
+  console.log(`Removing note ${title}`);
+  // console.console.log("Getting note ",title);
+}
+
+
+
 module.exports = {
   //addNote: addNote    // the function defined above
   addNote,    // the function defined above (shorter syntax for function names in ES6)
-  getAll
+  getAll,
+  getNote,
+  removeNote
 }
 
 // module.exports.addNote = () => {
